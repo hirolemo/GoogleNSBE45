@@ -28,37 +28,61 @@
         <h1 class="cover-heading">Mentor.</h1>
         <p class="lead"> Welcome to Eminem</p>
     </main>
- <form>
-   Full name:<br>
-  <input type="text" name="NSBEUofT"><br>
-  Gender:<br>
-  <input type="radio" name="gender" value="male" checked> Male<br>
-  <input type="radio" name="gender" value="female"> Female<br>
-  <input type="radio" name="gender" value="other"> Other<br>
-  E-mail: <input type="text" name = "heheheheheh@hahahhaha.ca"><br>
-  Occupation: <input type="text" name = "EE"><br>
-  Education: <input type="text" name = "ECE"><br>
-  Areas of Interest: <input type="text" name = "Mental health support"><br>
-  Keywords: <input type="text" name = "n/a"><br>
-  Phone number: <input type="text" name = "23423424"><br>
-
-  <button type="button">Submit!</button>
-</form>
 
 
-    <form action="form_handler.php" method="GET">
-    User Name: <input name="firstname" type="text" />
-      <input type="submit" value="Submit" />
-    </form>
 
     <body>
-    <h1>User Greeting</h1>
-    <php
-    // This will print whatever the user entered into the form.html page.
-    $name = filter_input(INPUT_GET, 'firstname', FILTER_SANITIZE_STRING);
-  echo "Hello, ". $name ."!";
-  <h1>echo "Hello, ". $name ."!"</h1>
-  >
+
+      <form action="/action_page.php"
+      target="_blank">
+      First name: <input type="text" name="FirstName" value="Adeola"><br>
+      Last name: <input type="text" name="LastName" value="Awoterinwa"><br>
+      Phone Number: <input type="text" name="PhoneNumber" value="647-XXX-XXXX"><br>
+      Email Address: <input type="text" name="Email Address" value="XXXXXXX@gmail.com"><br>
+      <!-- <input type="submit" value="Submit"> -->
+
+      <p> Please select your preferred Pronoun:</p>
+      <div>
+        <input type="radio" id="contactChoice1"
+         name="contact" value="email">
+        <label for="contactChoice1">He/Him</label>
+
+        <input type="radio" id="contactChoice2"
+         name="contact" value="phone">
+        <label for="contactChoice2">She/Her</label>
+
+        <input type="radio" id="contactChoice3"
+         name="contact" value="mail">
+        <label for="contactChoice3">Other</label>
+      </div>
+      If Other please specify: <input type="text" name="Preferred Pronoun" value="They/Them"><br>
+
+      Occupation (s): <input type="text" name="LastName" value="Engineer"><br>
+      Educational Background: <input type="text" name="PhoneNumber" value="Computer Engineer"><br>
+      <p> Please select your Ethnicity:</p>
+      <!-- Ethnicity: <input type="text" name="Email Address" value="XXXXXXX@gmail.com"><br> -->
+
+      <input type="radio" name="gender" value="male" > White<br>
+      <input type="radio" name="gender" value="female"> Middle Eastern<br>
+      <input type="radio" name="gender" value="male" checked> Black / African <br>
+      <input type="radio" name="gender" value="female"> Native <br>
+      <input type="radio" name="gender" value="male" > Asian<br>
+      <input type="radio" name="gender" value="female"> European<br>
+      <input type="radio" name="gender" value="other"> Other  <br>
+
+      <a>If Other please specify: <input type="text" name="Preferred Pronoun" value="Other"><br>
+
+
+      Provide an extensive description of your experience and how you maneuvered through it <br>
+      <textarea name="paragraph_text" cols="50" rows="10"></textarea>
+
+      <p>Click the "Submit" button once all required fields have been completed.</p>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+      </form>
+
+
   </body>
 
 
