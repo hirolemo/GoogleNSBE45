@@ -1,16 +1,42 @@
 <html>
 
 <head>
-
+<style>
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: green;
+}
+</style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="../assets/css/index.css">
-  <script src="../assets/assets/index.js"></script>
+  <script src="../assets/js/index.js"></script>
   <!-- <script src="../assets/bootstrap.min.js"></script> -->
   <!-- <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"> -->
     <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
 </head>
 <body>
-  <p> Google NSBE 45</p>
+  <p> Welcome to Eminem </p>
+  <p> Hello, how can we be of help. What are you looking for? </p>
+  <button type="button">I'm a Mentor</button>
+  <button type="button">I'm a Mentee</button>
+
+
+<button>Default Button</button>
+<button class="button" onclick= "window.location.href = 'https://w3docs.com';">Styled Button</button>
+
+<div id="demo">
+  <h2>Let AJAX change this text</h2>
+  <button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
 </body>
 
 </html>
