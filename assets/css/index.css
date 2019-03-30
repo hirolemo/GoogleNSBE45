@@ -17,3 +17,12 @@
 .button:hover {
   background-color: green;
 }
+
+#messageArea{
+  display: none;
+}
+
+#welcome-container{
+  font-weight: 350 !important;
+  font-size: 20px !important;
+}
