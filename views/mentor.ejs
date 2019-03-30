@@ -11,16 +11,8 @@
     <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
 </head>
 <body>
-  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="masthead mb-auto">
-    <div class="inner">
-      <!-- <h3 class="masthead-brand">Cover</h3> -->
-      <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" id="homeButton" onclick=clickHome() href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Contact</a>
-      </nav>
-    </div>
+  <div class="cover-container d-flex flex-column">
+  <header>
  </header>
 
  <main role="main" class="inner cover text-center">
@@ -28,21 +20,92 @@
         <h1 class="cover-heading">Mentor.</h1>
         <p class="lead"> Welcome to Eminem</p>
     </main>
- <form>
-   Full name:<br>
-  <input type="text" name="NSBEUofT"><br>
-  Gender:<br>
-  <input type="radio" name="gender" value="male" checked> Male<br>
-  <input type="radio" name="gender" value="female"> Female<br>
-  <input type="radio" name="gender" value="other"> Other<br>
-  E-mail: <input type="text" name = "heheheheheh@hahahhaha.ca"><br>
-  Occupation: <input type="text" name = "EE"><br>
-  Education: <input type="text" name = "ECE"><br>
-  Areas of Interest: <input type="text" name = "Mental health support"><br>
-  Keywords: <input type="text" name = "n/a"><br>
-  Phone number: <input type="text" name = "23423424"><br>
+ <form class="needs-validation col-md-8 order-md-1">
 
-  <button type="button">Submit!</button>
+   <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="name">Full Name</label>
+      <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+      <div class="invalid-feedback">
+        Valid first name is required.
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" placeholder="" value="" required>
+      <div class="invalid-feedback">
+        Valid first name is required.
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+   <div class="col-md-6 mb-3">
+     <label for="EE">Occupation</label>
+     <input type="text" class="form-control" id="EE" placeholder="" value="" required>
+     <!-- <div class="invalid-feedback">
+       Valid first name is required.
+     </div> -->
+   </div>
+   <div class="col-md-6 mb-3">
+     <label for="ECE">Education</label>
+     <input type="text" class="form-control" id="ECE" placeholder="" value="" required>
+     <div class="invalid-feedback">
+       Education is required.
+     </div>
+   </div>
+ </div>
+
+    <div class="mb-3">
+      <!-- Gender -->
+    <label for="name">Gender</label>
+    <div class="d-block my-3">
+        <div class="custom-control custom-radio">
+          <input id="Male" name="gender" type="radio" class="custom-control-input" checked required>
+          <label class="custom-control-label" for="Male">Male</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input id="Female" name="gender" type="radio" class="custom-control-input" checked required>
+          <label class="custom-control-label" for="Female">Female</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input id="Other" name="gender" type="radio" class="custom-control-input" checked required>
+          <label class="custom-control-label" for="Other">Other</label>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-5 mb-3">
+        <label for="interest">Area of Interest:</label>
+          <select class="custom-select d-block w-100" id="interest" required>
+            <option value="">Choose...</option>
+            <option>Mental health support</option>
+            <option>Mentorship</option>
+            <option>Other</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid country.
+          </div>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="email">Phone Number</label>
+        <input type="number" class="form-control" id="number" placeholder="" value="" required>
+      </div>
+     <div class="col-md-6 mb-3">
+       <label for="name">Keywords</label>
+       <input type="text" class="form-control" id="keyword" placeholder="" value="" required>
+     </div>
+   </div>
+
+    <button type="submit" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+      Submit
+    </button>
 </form>
 
 
