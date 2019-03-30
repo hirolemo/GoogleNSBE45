@@ -1,0 +1,5 @@
+{
+"server_port" : "5000",
+"mongo_db_address" : "mongodb+srv://user1:<password>@cluster0-ki0sh.mongodb.net/test?retryWrites=true",
+"app_secret_hash_key" : "f2ece26e-c07a-4ef9-ae8f-7a7a6862e679"
+}
