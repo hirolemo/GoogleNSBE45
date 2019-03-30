@@ -9,6 +9,7 @@ var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
 var Message = require('./models/message');
+var Mentor = require('./models/mentee');
 var users = [];
 var connections = [];
 
@@ -45,6 +46,42 @@ app.get('/mentee', function(req, res) {
 
 app.get('/mentor', function(req, res) {
 	res.render('mentor');
+})
+
+app.get('/mentorAdded', function(req, res) {
+	res.render('mentorAdded');
+})
+
+app.post('/addMentor', function(req,res){
+
+  var keywords = req.body.keywords;
+
+  var keywordSplit = keywords.split(",");
+
+  var mentor = new Mentor({
+      Name: req.body.fullName,
+      Gender: req.body.gender,
+      Email: req.body.email,
+      Occupation: req.body.occupation,
+      Education: req.body.education,
+      AreasOfInterest: req.body.areaOfInterest,
+      Keywords: keywordSplit,
+      PhoneNumber: req.body.phoneNumber
+
+ });
+  console.log("user for signup " + user);
+  mentor.save(function(err,mentorr){
+    if(err){
+      var error = 'Oops something bad happened! Try again';
+      res.render('index', {error: error});
+      console.log(err);
+    }
+      else{
+          var success = 'SAdded mentor';
+          res.render('index', {error: success});
+          console.log(mentorr);
+      }
+  });
 })
 
 io.sockets.on('connection', function(socket){
