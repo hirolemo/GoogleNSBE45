@@ -12,9 +12,17 @@ function clickMentor(){
 
 }
 
+function clickHome(){
+  $('#homeButton').click(function(){
+    window.location.replace('/');
+  });
+
+}
+
 /* Set up the page */
 $( document ).ready(function (){
     clickMentee();
     clickMentor();
+    clickHome();
 
 })
