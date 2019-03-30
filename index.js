@@ -3,6 +3,8 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 
+var config = require("./models/config.json");
+var mongoose = require("mongoose");
 
 var app = express();
 
