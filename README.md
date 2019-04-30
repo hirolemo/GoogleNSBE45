@@ -1,5 +1,6 @@
 # GoogleNSBE45
-
+Mentor-mentee connection platform to aid students with mental health issues and career guidance.
+Winner Best Social Hack Challenge JPMorgan & Chase Google Hackathon NSBE 45th Conference
 
 how to run
 
